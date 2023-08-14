@@ -53,7 +53,6 @@
     // Only run if in an iframe
       if (window.top !== window.self) {
         console.log('running post message');
-        //let anonId = localStorage.getItem("ajs_anonymous_id");
         let anonId = analytics.user().anonymousId();
         console.log(anonId);
         analytics.page(null, 'iFrame Page View');
@@ -66,5 +65,5 @@
 
 <body>
   <h1>CrossDomainIframe</h1>
-  <p>Test page for cross-domain iframe.</p>
+  <p>This page functions as the parent brand/domain that sets the global anonymousId.</p>
 </body>
